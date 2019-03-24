@@ -74,8 +74,7 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-    var d;
-    d= Math.sqrt(Math.pow(x2-x1,2) +Math.pow(y2-y1,2));
+    var d= Math.sqrt(Math.pow(x2-x1,2) +Math.pow(y2-y1,2));;
     return  d;
 }
 
@@ -130,7 +129,8 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-    throw new Error('Not implemented');
+    var lastone = value.toString().split('').pop();
+    return lastone;
 }
 
 
