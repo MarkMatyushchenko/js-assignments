@@ -146,7 +146,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-    return parseInt(value);
+    return Number(value);
 }
 
 /**
@@ -163,7 +163,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a,b,c) {
-    throw new Error('Not implemented');
+    return Math.sqrt(a*a+b*b+c*c);
 }
 
 /**
@@ -205,7 +205,9 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    throw new Error('Not implemented');
+     for (var i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i == 0) return false;
+    }
 }
 
 /**
