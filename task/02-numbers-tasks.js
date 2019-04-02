@@ -91,7 +91,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-    return ((-b)/a);
+    return -b/a;
 }
 
 
@@ -146,7 +146,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-    return parseInt(value, 2);
+    return parseInt(value);
 }
 
 /**
