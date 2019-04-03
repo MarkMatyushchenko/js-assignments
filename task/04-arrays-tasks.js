@@ -39,7 +39,7 @@ function findElement(arr, value) {
  */
 function generateOdds(len) {
    var arr = [];
-   for( var i=0; i<= len; i++)
+   for( var i=0; i< len; i++)
    {
       arr[i] = 1 + (i*2);
    }
