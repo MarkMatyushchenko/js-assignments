@@ -135,7 +135,11 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   throw new Error('Not implemented');
+   for( var i=0; i < arr.length; i++)
+   {
+      arr[i] = arr[i].ToUpperCase();
+   }
+   return arr;
 }
 
 
