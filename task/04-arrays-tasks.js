@@ -104,7 +104,17 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   throw new Error('Not implemented');
+   var a = [];
+   var j = 0;
+   for( var i=0; i < arr.length; i++)
+   {
+      if( typeof arr[i] == "string")
+      {
+        a[j] =  arr[i];
+        j++;
+      }
+   }
+   return a;
 }
 
 /**
@@ -154,7 +164,11 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-   throw new Error('Not implemented');
+    for(var i=0; i < arr.length; i++)
+    {
+        arr[i] = arr[i].length;
+    }
+    return arr;
 }
 
 /**
