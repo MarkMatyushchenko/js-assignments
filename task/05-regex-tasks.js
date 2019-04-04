@@ -18,7 +18,7 @@
  * Match :
  *   '{3F2504E0-4F89-41D3-9A0C-0305E82C3301}'
  *   '{21EC2020-3AEA-4069-A2DD-08002B30309D}'
- *   '{0c74f13f-fa83-4c48-9b33-68921dd72463}'
+ *   '{0c74f13f-fa83-4c48-9b33-68921dd7246dd3}'
  *
  *  Do not match:
  *   '{D44EF4F4-280B47E5-91C7-261222A59621}'
@@ -31,7 +31,7 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-   throw new Error('Not implemented');
+   return new RegExp('{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}}');
 }
 
 
