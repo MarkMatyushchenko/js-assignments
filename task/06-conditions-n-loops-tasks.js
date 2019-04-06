@@ -50,7 +50,7 @@ function getFactorial(n) {
         return n;
     }
     else {
-        return n * getFactorinal(n-1);
+        return n * getFactorial(n-1);
     }
         
 }
