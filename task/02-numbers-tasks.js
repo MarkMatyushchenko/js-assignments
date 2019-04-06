@@ -185,7 +185,7 @@ function getParallelipidedDiagonal(a,b,c) {
  */
 function roundToPowerOfTen(num, pow) {
     var powOfTen = Math.Pow(10,num);
-    return (Math.Pow(powOfTen/num) * powOfTen);
+    return (Math.Round(powOfTen/num) * powOfTen);
 }
 
 /**
