@@ -184,8 +184,9 @@ function getParallelipidedDiagonal(a,b,c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    var powOfTen = Math.pow(10,num);
-    return (Math.round(num/powOfTen) * powOfTen);
+    var powOfTen = Math.pow(10, pow);
+    return (Math.round(num / powOfTen) * powOfTen);
+    
 }
 
 /**
@@ -228,7 +229,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    throw new Error('Not implemented');
+    return +value || def;
 }
 
 module.exports = {
