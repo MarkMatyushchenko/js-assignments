@@ -197,7 +197,12 @@ function insertItem(arr, item, index) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'a', 'b', 'c' ]
  */
 function getHead(arr, n) {
-   throw new Error('Not implemented');
+   var a = [];
+   for( var i=0; i < n; i++)
+   {
+       a[i] = arr[i];
+   }
+   return a;
 }
 
 
