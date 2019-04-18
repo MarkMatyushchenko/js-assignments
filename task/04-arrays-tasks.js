@@ -24,19 +24,7 @@
  */
 //переделать
 function findElement(arr, value) {
-   var l = false;
-   for(let i=0; i < arr.length; i++)
-   {
-      if ( arr[i] == value) 
-        l = true;
-   }
-   if(l == true){
-    return value;
-   }
-   else {
-    return -1;
-   }
-   
+  return arr.findIndex(element => element === value);   
 }
 
 /**
