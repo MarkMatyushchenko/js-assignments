@@ -229,6 +229,7 @@ function encodeToRot13(str) {
     {
         if(str[i] ==    
     }
+    return lowCase;
 }
 
 /**
