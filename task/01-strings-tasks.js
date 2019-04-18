@@ -223,9 +223,29 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-    var lowCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    var upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-    return lowCase;
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
+            if (str.charCodeAt(i) + 13 > 90) {
+                result += String.fromCharCode(65 + str.charCodeAt(i) + 13 - 90 - 1);
+            } else {
+                result += String.fromCharCode(str.charCodeAt(i) + 13);
+            }
+        } else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
+            if (str.charCodeAt(i) + 13 > 122) {
+                result += String.fromCharCode(97 + str.charCodeAt(i) + 13 - 122 - 1);
+            } else {
+                result += String.fromCharCode(str.charCodeAt(i) + 13);
+            }
+        } else {
+            if (str.charCodeAt(i) === 32) {
+                result += String.fromCharCode(str.charCodeAt(i));
+            } else {
+                result += str[i];
+            }
+        }
+    }
+    return result;
 }
 
 /**
