@@ -39,12 +39,16 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   var arr = [];
-   for( var i=0; i< len; i++)
-   {
-      arr[i] = 1 + (i*2);
-   }
-   return arr;
+    var arr = Array(len).fill(1);
+
+    arr.reduce((sum, current, index) => {
+        if (index > 0) {
+            sum = arr[index - 1] + 2;
+            arr[index] = sum;
+        }
+    });
+
+    return arr;
 }
 
 
