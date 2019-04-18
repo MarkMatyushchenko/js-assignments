@@ -143,7 +143,7 @@ function removeFalsyValues(arr) {
 function getUpperCaseStrings(arr) {
    for( var i=0; i < arr.length; i++)
    {
-      arr[i] = arr[i].ToUpperCase();
+      arr[i] = arr[i].toUpperCase();
    }
    return arr;
 }
@@ -213,7 +213,14 @@ function getHead(arr, n) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
 function getTail(arr, n) {
-   throw new Error('Not implemented');
+   var arrRes = [];
+   var j =0;
+   for( let i=arr.length-n; i < arr.length; i++)
+   {
+      arrRes[j] = arr[i];
+      j++;
+   }
+   return arrRes;
 }
 
 
