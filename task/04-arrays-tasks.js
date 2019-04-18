@@ -507,8 +507,7 @@ function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 function getIntervalArray(start, end) {
-var end = 5;
-var start = 1;
+
 var l = (end - start)+1; 
    var arr =[];
    arr[0] = start;
