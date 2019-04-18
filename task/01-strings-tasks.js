@@ -207,9 +207,9 @@ function getRectangleString(width, height) {
     var vertical = height - 2;
     var result ="";
     result += '┌' + ('─'.repeat(horizontal)) +'┐\n'  ;
-    while(vertical !== 0)
+    while(vertical !==0)
     {
-        result += '│' + (' '.repeat(topBottom)) + '│' + '\n';
+        result += '│' + (' '.repeat(horizontal)) + '│' + '\n';
         vertical--;
     }
     
