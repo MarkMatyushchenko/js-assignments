@@ -214,6 +214,7 @@ function getRectangleString(width, height) {
     }
     
     result += '└' + ('─'.repeat(horizontal)) +'┘\n'  ;
+    return result;
 }
 
 
