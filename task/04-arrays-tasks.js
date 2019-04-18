@@ -22,13 +22,21 @@
  *    ['Array', 'Number', 'string'], 'Date'    => -1 
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
+//переделать
 function findElement(arr, value) {
-   for(var i=0; i < arr.length; i++)
+   var l = false;
+   for(let i=0; i < arr.length; i++)
    {
       if ( arr[i] == value) 
-       return value;
+        l = true;
    }
-   return -1;
+   if(l == true){
+    return value;
+   }
+   else {
+    return -1;
+   }
+   
 }
 
 /**
