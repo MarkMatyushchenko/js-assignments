@@ -280,23 +280,16 @@ function reverseInteger(num) {
  */
 //podpravit'
 function isCreditCardNumber(ccn) {
-   let sum = 0;
-
-  for (let i = 0; i < ccn.length; i++) {
-    let cardNum = parseInt(ccn[i]);
-
-    if ((ccn.length - i) % 2 === 0) {
-      cardNum = cardNum * 2;
-
-      if (cardNum > 9) {
-        cardNum = cardNum - 9;
-      }
+   ccn = String(ccn);
+    var sum = Number(ccn[ccn.length - 1]);
+    var parity = ccn.length % 2;
+    for (var i = 0; i < ccn.length - 1; i++) {
+        var digit = Number(ccn[i]);
+        if (i % 2 == parity)
+            digit = (digit * 2 > 9) ? digit * 2 - 9 : digit * 2;
+        sum += digit;
     }
-
-    sum += cardNum;
-  }
-
-  return sum % 10 === 0;
+    return sum % 10 == 0;
 }
 
 
